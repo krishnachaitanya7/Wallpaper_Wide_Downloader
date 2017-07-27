@@ -6,6 +6,8 @@ def file_checker_and_deleter():
 	for file_jpg in glob.glob("*.jpg"):
 		if mime.from_file(str(file_jpg)) == 'text/html':
 			os.remove(str(file_jpg))
+if __name__ == "__main__":
+	file_checker_and_deleter()
         	
         	
 	
