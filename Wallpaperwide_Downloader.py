@@ -2,6 +2,7 @@ import urllib2
 from bs4 import BeautifulSoup
 import Downloader
 import Constant_Values
+import file_checker
 type_to_download = Constant_Values.type_to_download
 first_index_of_wallpapers = Constant_Values.first_index_of_wallpapers
 last_index_of_wallpapers = Constant_Values.last_index_of_wallpapers
@@ -14,4 +15,5 @@ for i in range(first_index_of_wallpapers,last_index_of_wallpapers+1):
         if j < 10:
             print url_tag
             Downloader.download_url('http://wallpaperswide.com/download/'+url_tag.split('/')[-1][:-7]+'-wallpaper-1366x768.jpg')
+file_checker.file_checker_and_deleter()
 
