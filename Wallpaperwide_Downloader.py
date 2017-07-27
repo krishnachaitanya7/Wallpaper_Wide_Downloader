@@ -1,10 +1,10 @@
-import sys
 import urllib2
 from bs4 import BeautifulSoup
 import Downloader
-type_to_download = 'http://wallpaperswide.com/celebrities-desktop-wallpapers.html'
-first_index_of_wallpapers = 3
-last_index_of_wallpapers = 3
+import Constant_Values
+type_to_download = Constant_Values.type_to_download
+first_index_of_wallpapers = Constant_Values.first_index_of_wallpapers
+last_index_of_wallpapers = Constant_Values.last_index_of_wallpapers
 download_type_base_url = type_to_download[:-5]
 for i in range(first_index_of_wallpapers,last_index_of_wallpapers+1):
     page = urllib2.urlopen(download_type_base_url+'/page/'+str(i))
